@@ -1,0 +1,483 @@
+html,
+body {
+    width: 100%;
+    /*height: 100%;*/
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #333;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+html,
+body {
+    background-color: #fff;
+    background: url(../images/bricks.jpg) repeat;
+    text-align: center;
+}
+
+#page_stage2 {
+    overflow-y: auto;
+}
+
+body.index #container {
+    left: 0;
+    width: 100%;
+}
+
+.body_top_margin {
+    height: 80px;
+}
+
+.blocks_container {
+    margin: auto auto 50px auto;
+    display: inline-block;
+}
+
+.blocks_container a {
+    text-decoration: none;
+    color: #333;
+}
+
+.blocks_container a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.blocks_container_shadow {
+    -moz-box-shadow: 0 0 60px 5px #888;
+    -webkit-box-shadow: 0 0 60px 5px #888;
+    box-shadow: 0 0 60px 5px #888;
+}
+
+.blocks_header_container {
+    font-size: 35px;
+    text-align: left;
+}
+
+.blocks_container div[class*="span"] {
+    background-color: #eee;
+    text-align: center;
+    min-height: 133px;
+    line-height: 133px;
+    border: 1px #ccc solid;
+    margin-left: 0;
+    width: 200px;
+    cursor: pointer;
+}
+
+.blocks_container div.span1:hover {
+    background-color: silver;
+    color: #fff;
+}
+
+.blocks_container div.span1.boy {
+    border-right: 1px #fa940f solid;
+}
+
+.blocks_container div.span1.boy:hover {
+    background-color: #fa940f;
+    color: #fff;
+}
+
+.blocks_container div.span1.girl {
+    border-bottom: 1px #f20061 solid;
+}
+
+.blocks_container div.span1.girl:hover {
+    background-color: #f20061;
+    color: #fff;
+}
+
+.tittle_girl {
+    border-bottom: 3px solid #f20061;
+}
+
+.tittle_boy {
+    border-bottom: 3px solid #fa940f;
+}
+
+.blocks_container div[class="row"] {
+    margin-left: 0;
+}
+
+.blocks_container .row .lead {
+    margin-bottom: 0;
+}
+
+.blocks_container.lead {
+    margin-bottom: 25px;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.highlight_info_label {
+    font-weight: bold;
+}
+
+.view_map_larger_link,
+.view_map_larger_link:hover {
+    text-align: right;
+    margin: 10px 0;
+    color: #fa940f;
+    font-weight: bold;
+}
+
+@media all {
+
+    .icon-heart {
+        background-position: -95px 0px;
+        top: -7px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    #default-popup .icon-heart {
+        top: 0;
+    }
+
+}
+
+#myModal.modal {
+    width: 1000px;
+    left: 36%;
+}
+
+#myModal .modal-body {
+    max-height: 600px;
+}
+
+.avgrund-popup {
+    width: 940px;
+    height: 675px;
+    left: 33%;
+    top: 25%;
+    padding: 10px 20px;
+}
+
+.avgrund-popup .header {
+    height: 45px;
+}
+
+.signature {
+    text-align: right;
+    font-weight: bold;
+}
+
+.tile_main_container .lead {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+#default-popup .content [class*="span"],
+#default-popup .content .row {
+    margin-left: 0;
+}
+
+#default-popup .content .column_separator {
+    margin-right: 20px;
+}
+
+.custom_title_h3 {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+.social_icon {
+    float: right;
+    left: -10px;
+    position: relative;
+}
+
+.social_instagram_icon {
+    width: 25px;
+    margin-right: 10px;
+    top: -3px;
+}
+
+.social_twitter_icon {
+    width: 45px;
+    top: -6px;
+}
+
+.view_larger_map_container {
+    text-align: right;
+}
+
+.blocks_header_container a.display_language_question {
+    float: right;
+    font-size: 18px;
+    top: 7px;
+    position: relative;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.blocks_header_container a.display_language_question:hover {
+    color: #f20061;
+}
+
+/** START PADRINOS **/
+
+.content_padrinos div.row .span5:first-child {
+    margin-right: 35px;
+}
+
+.madrina_padrino_photo_dimensions {
+    width: 460px;
+}
+
+.content_padrinos  p.lead.padrinos_hashtags {
+    padding: 18px 0;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/** END PADRINOS **/
+
+/** START CORTEJO **/
+
+.content_cortejo .pics_container {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.content_cortejo .cortejo_pic {
+    width: 153px;
+    height: 170px;
+}
+
+.on_mobile .content_cortejo .cortejo_pic {
+    width: 228px;
+    height: 255px;
+}
+
+.content_cortejo .cortejo_pic,
+.content_padrinos .padrinos_pic,
+.content_novia .novios_pic,
+.content_novio .novios_pic {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    cursor: pointer;
+}
+
+.content_cortejo .cortejo_pic:hover,
+.content_padrinos .padrinos_pic:hover,
+.content_novia .novios_pic:hover,
+.content_novio .novios_pic:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.content_cortejo  .cortejo_description {
+    float: right;
+    width: 626px;
+    height: 171px;
+}
+
+.content_cortejo p.lead.cortejo_hashtags {
+    padding: 18px;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/** END CORTEJO **/
+
+/** START CIVIL **/
+
+
+/** END CIVIL **/
+
+/** START RSVP **/
+
+.content_rsvp label {
+    font-size: 35px;
+    line-height: 40px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.content_rsvp .form-horizontal .controls {
+    margin-left: 325px;
+}
+
+.content_rsvp .form-horizontal .controls.rsvp_submit_controls {
+    margin-left: 195px;
+}
+
+.content_rsvp input[type="text"],
+.content_rsvp input[type="email"],
+.content_rsvp input[type="number"] {
+    height: 40px;
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.content_rsvp .form-horizontal .help-block {
+    margin-top: 5px;
+}
+
+.content_rsvp .form-horizontal .control-label {
+    width: 305px;
+}
+
+.content_rsvp .input-xlarge {
+    width: 400px;
+}
+
+.content_rsvp #guestsCount.input-xlarge {
+    width: 100px;
+}
+
+.content_rsvp .form-horizontal .control-group {
+    padding-left: 45px;
+    margin-bottom: 35px;
+}
+
+.content_rsvp form p {
+    margin-bottom: 60px;
+}
+
+.content_rsvp #acceptRSVP {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.content_rsvp #rejectRSVP.btn-link {
+    color: rgb(204, 65, 0);
+    text-decoration: underline;
+    margin-right: 20px;
+}
+
+#restartRSVP {
+    position: relative;
+    top: -1px;
+}
+
+/** END RSVP **/
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+
+    -webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    -o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+    transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    -webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -moz-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -ms-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    -o-transform: translateY(0) perspective( 600px ) rotateX( 0 );
+    transform: translateY(0) perspective( 600px ) rotateX( 0 );
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+    opacity: 0;
+
+    -webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    -o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+    transform: translateY(-10px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+    opacity: 0;
+
+    -webkit-transition: opacity 0.3s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/* Styles for dialog window */
+div.tile_main_container {
+    background: white;
+    padding: 40px 30px;
+    text-align: left;
+    max-width: 940px;
+    margin: 40px auto;
+    position: relative;
+}
+
+div.tile_main_container.on_mobile {
+    max-width: 450px;
+}
+
+#civilMainContainer div.span12,
+#cortejoMainContainer div.span12,
+#rsvpMainContainer div.span12 {
+    width: 98%;
+}
+
+div#cortejoMainContainer.tile_main_container.on_mobile .cortejo_description {
+    width: auto;
+    height: auto;
+}
+
+/** RSVP ON MOBILE **/
+
+.on_mobile .content_rsvp .form-horizontal .control-group {
+    padding-left: 0;
+}
+
+.on_mobile .content_rsvp .form-horizontal .control-label {
+    text-align: left;
+}
+
+.on_mobile .content_rsvp .form-horizontal .control-label {
+    float: none;
+}
+
+.on_mobile .content_rsvp .form-horizontal .controls {
+    margin-left: 0;
+}
+
+.on_mobile .content_rsvp .input-xlarge {
+    width: 325px;
+}
+
+.on_mobile .content_rsvp .form-horizontal .controls.rsvp_submit_controls {
+    margin-left: 0;
+}
+
+.on_mobile #rejectRSVP {
+    margin-bottom: 15px;
+}

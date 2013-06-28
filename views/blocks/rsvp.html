@@ -1,0 +1,135 @@
+<div id="rsvpMainContainer" data-ng-class="viewData.tileMainContainerClass">
+    <div class="row content_rsvp">
+        <div class="span12 lead">
+            <div class="tittle_girl custom_title_h3">
+                {{ 'RSVP_TILE_LABEL' | translate }}
+            </div>
+
+            <div data-ng-show="viewData.rsvp.isDone">
+                <div>
+                    {{ 'RSVP_DONE_MESSAGE' | translate }}
+                    <button id="restartRSVP"
+                            name="restartRSVP"
+                            class="btn btn-link"
+                            data-ng-click="restartRSVP()">
+                        {{ 'RSVP_NEW_RSVP_BUTTON_LABEL'| translate }}
+                    </button>
+                </div>
+            </div>
+
+            <form name="rsvpForm"
+                  class="form-horizontal rsvp_form"
+                  data-ng-hide="viewData.rsvp.isDone">
+
+                <p style="margin-bottom: 20px;">
+                    {{ 'RSVP_DESCRIPTION_TEXT' | translate }}
+                </p>
+
+                <div class="alert">
+                    <strong>{{ 'RSVP_FORM_ALERT_ERROR_MESSAGE_1' | translate }}</strong>
+                    {{ 'RSVP_FORM_ALERT_ERROR_MESSAGE_2' | translate }}
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="fullname">{{ 'RSVP_FULL_NAME_LABEL' | translate }}</label>
+                    <div class="controls">
+                        <input id="fullname"
+                               name="fullname"
+                               type="text"
+                               class="input-xlarge"
+                               data-ng-model="viewData.rsvp.fullname"
+                               required />
+                        <p class="help-block"
+                           ng-hide="rsvpForm.fullname.$dirty && rsvpForm.fullname.$invalid">
+                            {{ 'RSVP_FULL_NAME_HELP_TEXT' | translate }}
+                        </p>
+                        <p class="help-block"
+                           ng-show="rsvpForm.fullname.$dirty && rsvpForm.fullname.$invalid">
+                            <span ng-show="rsvpForm.fullname.$error.required">
+                                {{ 'RSVP_FULL_NAME_REQUIRED_ERROR_MESSAGE' | translate }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="email">{{ 'RSVP_EMAIL_LABEL' | translate }}</label>
+                    <div class="controls">
+                        <input id="email"
+                               name="email"
+                               type="email"
+                               class="input-xlarge"
+                               data-ng-model="viewData.rsvp.email"
+                               required />
+                        <p class="help-block"
+                           ng-hide="rsvpForm.email.$dirty && rsvpForm.email.$invalid">
+                            {{ 'RSVP_EMAIL_HELP_TEXT' | translate }}
+                        </p>
+                        <p class="help-block"
+                           ng-show="rsvpForm.email.$dirty && rsvpForm.email.$invalid">
+                            <span ng-show="rsvpForm.email.$error.required">
+                                {{ 'RSVP_EMAIL_REQUIRED_ERROR_MESSAGE' | translate }}
+                            </span>
+                            <span ng-show="rsvpForm.email.$error.email">
+                                {{ 'RSVP_EMAIL_INVALID_ERROR_MESSAGE' | translate }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <label class="control-label" for="guestsCount">{{ 'RSVP_GUESTS_COUNT_LABEL' | translate }}</label>
+                    <div class="controls">
+                        <input id="guestsCount"
+                               name="guestsCount"
+                               type="number"
+                               placeholder="0"
+                               class="input-xlarge"
+                               data-ng-model="viewData.rsvp.guestsCount"
+                               min="0"
+                               max="10"
+                               maxlength="2"
+                               required />
+                        <p class="help-block"
+                           ng-hide="rsvpForm.guestsCount.$dirty && rsvpForm.guestsCount.$invalid">
+                            {{ 'RSVP_GUESTS_COUNT_HELP_TEXT' | translate }}
+                        </p>
+                        <p class="help-block"
+                           ng-show="rsvpForm.guestsCount.$dirty && rsvpForm.guestsCount.$invalid">
+                            <span ng-show="rsvpForm.guestsCount.$error.required">
+                                {{ 'RSVP_GUESTS_COUNT_REQUIRED_ERROR_MESSAGE' | translate }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Button (Double) -->
+                <div class="control-group">
+                    <div class="controls rsvp_submit_controls">
+                        <button id="rejectRSVP"
+                                data-loading-text="..."
+                                name="rejectRSVP"
+                                class="btn btn-link"
+                                data-ng-click="confirmRSVP(false)"
+                                data-ng-disabled="rsvpForm.$invalid">
+                            {{ 'RSVP_REJECT_BUTTON_LABEL' | translate }}
+                        </button>
+                        <button id="acceptRSVP"
+                                data-loading-text="..."
+                                name="acceptRSVP"
+                                class="btn btn-primary"
+                                data-ng-click="confirmRSVP(true)"
+                                data-ng-disabled="rsvpForm.$invalid">
+                            {{ 'RSVP_ACCEPT_BUTTON_LABEL' | translate }}
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
