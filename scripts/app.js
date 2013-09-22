@@ -257,11 +257,6 @@ angular.module('FabiseApp', ['ngTranslate'])
                 });
             }, 10);
 
-//            $timeout(function() {
-//                $('.cortejo_pic, .padrinos_pic, .novios_pic').tooltip();
-//                $scope.assignTilesData
-//            }, 1000);
-
         });
 
         angular.element($window).bind('resize', function () {
@@ -354,9 +349,9 @@ angular.module('FabiseApp', ['ngTranslate'])
                     },
                     {
                         class: 'boy',
-                        contentLocation: 'views/blocks/rsvp.html',
-                        contentClass: 'content_rsvp',
-                        displayLabel: translate('RSVP_TILE_LABEL')
+                        contentLocation: 'views/blocks/bride_groom_photos_17.html',
+                        contentClass: 'content_photo',
+                        displayLabel: '<i class="icon-heart-empty"></i>'
                     },
                     {
                         class: 'boy',
@@ -503,9 +498,9 @@ angular.module('FabiseApp', ['ngTranslate'])
                     },
                     {
                         class: 'boy',
-                        contentLocation: 'views/blocks/rsvp.html',
-                        contentClass: 'content_rsvp',
-                        displayLabel: translate('RSVP_TILE_LABEL')
+                        contentLocation: 'views/blocks/bride_groom_photos_17.html',
+                        contentClass: 'content_photo',
+                        displayLabel: '<i class="icon-heart-empty"></i>'
                     },
                     {
                         class: 'boy',
@@ -605,9 +600,9 @@ angular.module('FabiseApp', ['ngTranslate'])
                     },
                     {
                         class: 'boy',
-                        contentLocation: 'views/blocks/rsvp.html',
-                        contentClass: 'content_rsvp',
-                        displayLabel: translate('RSVP_TILE_LABEL')
+                        contentLocation: 'views/blocks/bride_groom_photos_17.html',
+                        contentClass: 'content_photo',
+                        displayLabel: '<i class="icon-star"></i>'
                     }
                 ],
 
